@@ -1,10 +1,28 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'UiPath Stop Jobs'
+description: 'Action for stopping jobs on UiPath Orchestrator instance. Gets all Running or Pending jobs'
 inputs:
-  milliseconds:  # id of input
+  orchestratorInstanceUrl:  # id of input
     description: 'number of milliseconds to wait'
     required: true
     default: '1000'
+  orchestratorApplicationId:
+    description: 'Application ID to authenticate with Orchestrator'
+    required: true
+  orchestratorApplicationSecret:
+    description: 'Application secret to authenticate with Orchestrator'
+    required: true
+  orchestratorApplicationScope:
+    description: 'Application scope for Orchestrator'
+    required: true
+    default: 'OR.Jobs OR.Machines'
+  orchestratorTenant:
+    description: 'The tenant to stop jobs in'
+    required: true
+  orchestratorOrganization:
+    description: 'Organization name in Orchestrator'
+    required: true
+  
+
 outputs:
   time: # output will be available to future steps
     description: 'The current time after waiting'
