@@ -21,6 +21,9 @@ inputs:
   orchestratorOrganization:
     description: 'Organization name in Orchestrator'
     required: true
+  machineKey:
+    description: 'Machine key for jobs to stop'
+    required: true
   
 
 outputs:
